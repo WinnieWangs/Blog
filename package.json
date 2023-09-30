@@ -1,12 +1,15 @@
 {
+  "homepage": "https://winniewangs.github.io/blog",
   "scripts": {
-    "docs:dev": "vitepress dev",
+    "dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "docs:dev": "vitepress dev"
   },
   "devDependencies": {
     "commitizen": "^4.3.0",
-    "git-cz": "^4.9.0"
+    "git-cz": "^4.9.0",
+    "vitepress": "1.0.0-rc.20"
   },
   "config": {
     "commitizen": {
