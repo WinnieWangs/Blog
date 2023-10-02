@@ -14,16 +14,6 @@ export default defineConfig({
       { text: 'Home', link: '/' },
     ],
     sidebar: {
-      '/examples': [
-        {
-          text: 'Examples',
-          collapsed: true,
-          items: [
-            { text: 'Markdown Examples', link: '/examples/markdown-examples' },
-            { text: 'Runtime API Examples', link: '/examples/api-examples' }
-          ]
-        }
-      ],
       '/chore': [
         {
           text: 'HTTP1 - HTTP3',
@@ -31,16 +21,14 @@ export default defineConfig({
         },
         {
           text: 'Difference Between Promise and Async/Await',
-          link: '/chore/PromiseAwait.md'
+          link: '/chore/PromiseAwait'
         }
-        // {
-        //   text: 'HTTP/2',
-        //   link: '/http/http2',
-        // },
-        // {
-        //   text: 'HTTP/3',
-        //   link: '/http/http3',
-        // },
+      ],
+      '/design-pattern': [
+        {
+          text: '迭代器模式',
+          link: '/design-pattern/iterator'
+        }
       ]
     },
   }

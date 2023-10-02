@@ -7,11 +7,8 @@ hero:
   text: "更远的地方"
 
 features:
-  - title: HTTP
-    link: /http/http1
-    details: Http1 vs Http2 vs Http3
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 设计模式 
+    link: /design-pattern/iterator
   - title: 其他
     details: HTTP, 浏览器
     link: /chore/http
