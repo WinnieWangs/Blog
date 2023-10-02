@@ -8,7 +8,7 @@ hero:
 
 features:
   - title: 设计模式 
-    link: /design-pattern/iterator
+    link: /design-pattern/index
   - title: 其他
     details: HTTP, 浏览器
     link: /chore/http
