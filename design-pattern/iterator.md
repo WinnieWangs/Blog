@@ -1,72 +1,18 @@
-## 迭代器模式
+# 迭代器模式
 
 将for循环变量i的作用抽象化、通用话后形成的模式，在设计模式中成为 `Iterator`模式。`Iterator`模式用于在数据集合中按照顺序遍历集合，英语单词 `Iterate`有反复做某件事情的意思，汉语称为**迭代器**。
 
-```js:line-numbers
-class Book {
-    constructor(name) {
-        this.name = name
-    }
+:::: code-group
 
-    getName() {
-        return this.name
-    }
-}
+<<< @/design-pattern/code/iterator/main.js#snippet{js:line-numbers}[Main]
 
-class BookShelf {
-    constructor() {
-        this.books = []
-        this.last = 0
-    }
+<<< @/design-pattern/code/iterator/BookShelf.js#snippet{js:line-numbers}[BookShelf]
 
-    getBookAt(index) {
-        return this.books[index]
-    }
+<<< @/design-pattern/code/iterator/BookShelfIterator.js#snippet{js:line-numbers}[BookShelfIterator]
 
-    appendBook(book) {
-        this.books[this.last] = book
-        this.last++
-    }
+<<< @/design-pattern/code/iterator/Book.js#snippet{js:line-numbers}[Book]
 
-    getLength() {
-        return this.last
-    }
-
-    iterator() {
-        return new BookShelfIterator(this)
-    }
-}
-
-class BookShelfIterator {
-    constructor(bookShelf) {
-        this.bookShelf = bookShelf
-        this.index = 0
-    }
-
-    hasNext() {
-        return this.index < this.bookShelf.getLength()
-    }
-
-    next() {
-        const book = this.bookShelf.getBookAt(this.index)
-        this.index++
-        return book
-    }
-}
-
-const bookShelf = new BookShelf()
-
-bookShelf.appendBook(new Book('War and Peace'))
-bookShelf.appendBook(new Book('Pride and Prejudice'))
-bookShelf.appendBook(new Book('The Great Gatsby'))
-bookShelf.appendBook(new Book('Crime and Punishment'))
-
-const it  = bookShelf.iterator()
-
-while(it.hasNext()) {
-    console.log(it.next())
-}
-```
+::::
 
 ## 迭代器角色
 

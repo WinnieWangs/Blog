@@ -26,8 +26,16 @@ export default defineConfig({
       ],
       '/design-pattern': [
         {
-          text: '迭代器模式',
+          text: '前言',
+          link: '/design-pattern/index'
+        },
+        {
+          text: '迭代器模式(Iterator)',
           link: '/design-pattern/iterator'
+        },
+        {
+          text: '适配器模式(Adapter)',
+          link: '/design-pattern/adapter.md'
         }
       ]
     },
